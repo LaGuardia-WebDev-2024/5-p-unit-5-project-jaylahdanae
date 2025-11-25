@@ -6,8 +6,8 @@ Requirements
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
-[ no ] Feature 3 - Animation
+[ yes ] Feature 2 - Flip Card
+[ yes ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
 [ no ] Feature 6 - Unique Border Styles
@@ -16,12 +16,16 @@ Select TWO Additional Features to Add
 
 <!DOCTYPE html>
 <html>
-<h1>Invitation To Attend The Radio City Rockettes!</h1>
+  
+
+
 <head>
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
   <style>
-  h1 {
+  .Invite {
+    color: gold;
+    background-color: rgb(26, 125, 182);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(26, 153, 226); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -30,6 +34,18 @@ Select TWO Additional Features to Add
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
+  
+}
+body {
+font-family: Georgia, 'Times New Roman', Times, serif;
+animation: customAni 5s ease 0s infinite normal none;
+text-align: center;
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌟</text></svg>") 16 0,auto; /*!emojicursor.app*/
+}
+
+@keyframes customAni {
+  0%, 50%, 100% {opacity: 1;}
+  25%,75% {opacity: 0.3;}
 }
 
 /* The typing effect */
@@ -89,10 +105,20 @@ Select TWO Additional Features to Add
   background-color: rgb(255, 30, 30);
   color: rgb(241, 237, 237);
   transform: rotateY(180deg);
+  
+
+}
+li::marker {
+  content:"🎄";
+  font-size: 1.2em;
+
+  
 }
   </style>
 </head>
 <body>
+<h1 class="Invite">Invitation To Attend The Radio City Rockettes!</h1>
+
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -107,7 +133,13 @@ Select TWO Additional Features to Add
     </div>
   </div>
 </div>
-
+<ul>
+   <li> January 5th</li>
+   <li> Amazing Dancers & Entertainment
+    <li> Great experience </li>
+    <li> Food, Drinks & Merchandise is avalible.</li>
+   </li>
+</ul>
 
 </body>
 </html>
