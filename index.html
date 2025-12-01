@@ -24,8 +24,8 @@ Select TWO Additional Features to Add
   <meta charset="utf-8">
   <style>
   .Invite {
-    color: gold;
-    background-color: rgb(26, 125, 182);
+    color: rgb(116, 12, 21);
+    background-color: rgb(224, 213, 213);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(26, 153, 226); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -37,7 +37,12 @@ Select TWO Additional Features to Add
   
 }
 body {
-font-family: Georgia, 'Times New Roman', Times, serif;
+font-family: .special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 animation: customAni 5s ease 0s infinite normal none;
 text-align: center;
 cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌟</text></svg>") 16 0,auto; /*!emojicursor.app*/
@@ -68,6 +73,7 @@ cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wid
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin:auto;
   margin-top: 70px;
+  margin-bottom: 250px;
 }
 
 /* This container is needed to position the front and back side */
@@ -110,14 +116,33 @@ cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wid
 }
 li::marker {
   content:"🎄";
-  font-size: 1.2em;
+  font-size: 1.2em; 
 
   
+}
+
+ul{
+  width: fit-content;
+  margin:auto
+}
+body, html{
+  /* animation: colorChange 3s infinite alternate; */
+  background-color: burlywood;
+}
+@keyframes colorChange{
+  0%{background-color: burlywood;}
+}
+img{
+  border: 3px solid #085a0c
 }
   </style>
 </head>
 <body>
 <h1 class="Invite">Invitation To Attend The Radio City Rockettes!</h1>
+
+<p>The Rockettes Famous Kickline</p>
+<img src="https://hips.hearstapps.com/hmg-prod/images/the-radio-city-rockettes-perform-onstage-during-the-opening-news-photo-1575402747.jpg"
+width="210">
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -133,6 +158,9 @@ li::marker {
     </div>
   </div>
 </div>
+
+<p>The Rockettes Famous Kickline is very iconic. It symbolizes a line of dancers presenting there high kicks and technique. (fun fact: they dont actually hold on to each other when doing the famous kickline).</p>
+
 <ul>
    <li> January 5th</li>
    <li> Amazing Dancers & Entertainment
@@ -141,5 +169,6 @@ li::marker {
    </li>
 </ul>
 
+}
 </body>
 </html>
