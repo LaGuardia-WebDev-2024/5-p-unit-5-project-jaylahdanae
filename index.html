@@ -1,32 +1,227 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[  yes] border:, margin:, and padding: 
+[  yes] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
-[ no ] Feature 3 - Animation
+[ yes ] Feature 2 - Flip Card
+[ yes ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
-[ no ] Feature 6 - Unique Border Styles
+[ yes ] Feature 6 - Unique Border Styles
 -->
 
 
 <!DOCTYPE html>
 <html>
+  
+
 
 <head>
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
+  
   <style>
+  .Rockettes {
+    color:#085a0c;
+    font-style:italic;
+    text-decoration: underline;
+  }
+  .Famous {
+    color:#085a0c;
+    font-style:italic;
+    text-decoration: underline;
+  }
+  .Invite {
+    color: rgb(116, 12, 21);
+    background-color: rgb(224, 213, 213);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(26, 153, 226); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  
+}
+body {
+font-family: .special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+animation: customAni 5s ease 0s infinite normal none;
+text-align: center;
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌟</text></svg>") 16 0,auto; /*!emojicursor.app*/
+}
+
+@keyframes customAni {
+  0%, 50%, 100% {opacity: 1;}
+  25%,75% {opacity: 0.3;}
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(228, 224, 216); }
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin:auto;
+  margin-top: 70px;
+  margin-bottom: 250px;
+  
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 150%;
+  height: 200%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #1f7405;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(255, 30, 30);
+  color: rgb(241, 237, 237);
+  transform: rotateY(180deg);
+  
+
+}
+li::marker {
+  content:"🎄";
+  font-size: 1.2em; 
+
+  
+}
+
+ul{
+  width: fit-content;
+  margin:auto
+}
+body, html{
+  /* animation: colorChange 3s infinite alternate; */
+  background-color: burlywood;
+}
+@keyframes colorChange{
+  0%{background-color: burlywood;}
+}
+img{
+  border: 3px solid #085a0c
+}
+
+.main{ 
+  display:flex
+}
+
+.kick{
+  width:30%
+}
 
   </style>
 </head>
 <body>
+<h1 class="Invite">Invitation To Attend The Radio City Rockettes!</h1>
+<div class="main">
+<!-- left side -->
+<div class="kick">
+<p>The Rockettes Famous Kickline</p>
+<img src="https://hips.hearstapps.com/hmg-prod/images/the-radio-city-rockettes-perform-onstage-during-the-opening-news-photo-1575402747.jpg"
+width="210">
 
- 
+<p> 
+  <span class="Famous">The Rockettes Famous Kickline is very iconic. It symbolizes a line of dancers presenting there high kicks and technique. (fun fact: they dont actually hold on to each other when doing the famous kickline). </span>
+</p>
+</div>
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://m.media-amazon.com/images/I/71jK95ArvGL._AC_UF1000,1000_QL80_.jpg" alt="Avatar" style="width: 300px; height: 400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Your Invitation to come watch Jaylah dance and open for thre Radio City Rockettes.</h1>
+      <p>Performing Time: 6:00pm</p>
+      <p>Location:1260 6th Ave, New York, NY 10020</p>
+      <p>Purchase Ticket at: Rockettes.com/Christmas/plan-your-visit/
+      <p> Hope to see you there!!</p>
+    </div>
+  </div>
+</div>
+
+<!-- right side  -->
+<div class="kick">
+<p> Rockettes oldest dance scene the "Toy Soldier Scene"</p>
+<img src="https://people.com/thmb/nd8lpf1TNFKx8vTFB1xnyKLkf7A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/radio-city-wooden-soldiers-2-120524-9d4781d328d0480b8adef64ac737e0f4.jpg"
+width="210"> 
+<p> 
+  <span class="Rockettes">The Rockettes has been doing the Toy Soldier dance scene since 1933 until now. The toy soldier scence is a very historical era thats very iconic and showcases the rockettes athletic ability. </span>
+</p>
+</div>
+
+</div>
+
+
+
+<ul>
+   <li> January 5th</li> 
+   <li> Amazing Dancers & Entertainment
+    <li> Great experience </li>
+    <li> Food, Drinks & Merchandise is availible.</li>
+   </li>
+  </ul>
+       <li>
+        <a target="blank" href="https://youtu.be/c1mIdfOlKwA?list=RDc1mIdfOlKwA">
+          Toy Soldier Visual Scene!
+        </a>      
+      </li>
+      <ul>
+         <li> 
+          <a target="blank" href="https://youtu.be/U6MG0D_-21U?list=RDU6MG0D_-21U">
+            The Famous Kickline!
+          </a>
+         </li>
+      </ul>
 
 </body>
 </html>
