@@ -1,8 +1,8 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[  yes] border:, margin:, and padding: 
+[  yes] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
@@ -10,7 +10,7 @@ Select TWO Additional Features to Add
 [ yes ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
-[ no ] Feature 6 - Unique Border Styles
+[ yes ] Feature 6 - Unique Border Styles
 -->
 
 
@@ -24,6 +24,16 @@ Select TWO Additional Features to Add
   <meta charset="utf-8">
   
   <style>
+  .Rockettes {
+    color:#085a0c;
+    font-style:italic;
+    text-decoration: underline;
+  }
+  .Famous {
+    color:#085a0c;
+    font-style:italic;
+    text-decoration: underline;
+  }
   .Invite {
     color: rgb(116, 12, 21);
     background-color: rgb(224, 213, 213);
@@ -75,6 +85,7 @@ cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wid
   margin:auto;
   margin-top: 70px;
   margin-bottom: 250px;
+  
 }
 
 /* This container is needed to position the front and back side */
@@ -144,6 +155,7 @@ img{
 .kick{
   width:30%
 }
+
   </style>
 </head>
 <body>
@@ -154,7 +166,10 @@ img{
 <p>The Rockettes Famous Kickline</p>
 <img src="https://hips.hearstapps.com/hmg-prod/images/the-radio-city-rockettes-perform-onstage-during-the-opening-news-photo-1575402747.jpg"
 width="210">
-<p> The Rockettes Famous Kickline is very iconic. It symbolizes a line of dancers presenting there high kicks and technique. (fun fact: they dont actually hold on to each other when doing the famous kickline).</p>
+
+<p> 
+  <span class="Famous">The Rockettes Famous Kickline is very iconic. It symbolizes a line of dancers presenting there high kicks and technique. (fun fact: they dont actually hold on to each other when doing the famous kickline). </span>
+</p>
 </div>
 
 
@@ -178,8 +193,10 @@ width="210">
 <div class="kick">
 <p> Rockettes oldest dance scene the "Toy Soldier Scene"</p>
 <img src="https://people.com/thmb/nd8lpf1TNFKx8vTFB1xnyKLkf7A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/radio-city-wooden-soldiers-2-120524-9d4781d328d0480b8adef64ac737e0f4.jpg"
-width="210">
-<p> The Rockettes has been doing the Toy Soldier dance scene since 1933 until now. The toy soldier scence is a very historical era thats very iconic and showcases the rockettes athletic ability. </p>
+width="210"> 
+<p> 
+  <span class="Rockettes">The Rockettes has been doing the Toy Soldier dance scene since 1933 until now. The toy soldier scence is a very historical era thats very iconic and showcases the rockettes athletic ability. </span>
+</p>
 </div>
 
 </div>
@@ -187,12 +204,24 @@ width="210">
 
 
 <ul>
-   <li> January 5th</li>
+   <li> January 5th</li> 
    <li> Amazing Dancers & Entertainment
     <li> Great experience </li>
     <li> Food, Drinks & Merchandise is availible.</li>
    </li>
-</ul>
+  </ul>
+       <li>
+        <a target="blank" href="https://youtu.be/c1mIdfOlKwA?list=RDc1mIdfOlKwA">
+          Toy Soldier Visual Scene!
+        </a>      
+      </li>
+      <ul>
+         <li> 
+          <a target="blank" href="https://youtu.be/U6MG0D_-21U?list=RDU6MG0D_-21U">
+            The Famous Kickline!
+          </a>
+         </li>
+      </ul>
 
 </body>
 </html>
